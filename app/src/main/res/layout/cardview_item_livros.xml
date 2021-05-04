@@ -18,8 +18,8 @@
             android:id="@+id/id_imgLivro"
             android:layout_width="match_parent"
             android:layout_height="160dp"
-            android:background="#2d2d2d"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/mariasemples" />
 
         <TextView
 

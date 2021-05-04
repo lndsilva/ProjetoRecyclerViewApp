@@ -28,26 +28,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view;
-
         LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.layout.cardview_item_livros, parent, false);
+        View view = mInflater.inflate(R.layout.cardview_item_livros, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+
         holder.tvTituloLivro.setText(mData.get(position).getTitulo());
         holder.imgLivro.setImageResource(mData.get(position).getMiniatura());
-
-        
-
-
     }
 
     @Override
     public int getItemCount() {
-
         return mData.size();
     }
 
@@ -61,9 +55,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             super(itemView);
 
-            tvTituloLivro = (TextView) itemView.findViewById(R.id.id_lblTituloLivro);
-            imgLivro = (ImageView) itemView.findViewById(R.id.id_imgLivro);
-            cardView = (CardView) itemView.findViewById(R.id.id_recyclerView);
+            tvTituloLivro = itemView.findViewById(R.id.id_lblTituloLivro);
+            imgLivro = itemView.findViewById(R.id.id_imgLivro);
+            cardView = itemView.findViewById(R.id.idCardView);
 
 
         }

@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         lstLivros = new ArrayList<>();
+
+        lstLivros.add(new Livros("Mindset","Auto Ajuda","A nova psicologia do sucesso",R.drawable.mindset));
+        lstLivros.add(new Livros("Orgulho e Preconceito - Jane Austen","História","Fala sobre preconceito",R.drawable.orgulh_preconceito));
         lstLivros.add(new Livros("The Vegitarian ", "Categoria do livro", "Descrição do livro", R.drawable.thevigitarian));
         lstLivros.add(new Livros("The Wild Robot", "Categoria do livro", "Descrição do livro", R.drawable.thewildrobot));
         lstLivros.add(new Livros("The Martian", "Categoria do livro", "Descrição do livro", R.drawable.themartian));
@@ -34,10 +37,11 @@ public class MainActivity extends AppCompatActivity {
         lstLivros.add(new Livros("Hedied With", "Categoria do livro", "Descrição do livro", R.drawable.hediedwith));
 
 
-        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.id_recyclerView);
+        RecyclerView mRecyclerView = findViewById(R.id.id_recyclerView);
 
         RecyclerViewAdapter mAdapter = new RecyclerViewAdapter(getApplicationContext(), lstLivros);
 
+        //Montando o layout para o modelo ser inserido
         mRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),3));
 
         mRecyclerView.setAdapter(mAdapter);
